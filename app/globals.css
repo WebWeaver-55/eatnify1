@@ -1,0 +1,126 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* <CHANGE> Custom color palette for restaurant ordering system */
+  --background: #f4efe2;
+  --foreground: #21211e;
+  --card: #fef9eb;
+  --card-foreground: #21211e;
+  --popover: #f4efe2;
+  --popover-foreground: #21211e;
+  --primary: #ada28e;
+  --primary-foreground: #21211e;
+  --secondary: #d9d4c9;
+  --secondary-foreground: #21211e;
+  --muted: #777573;
+  --muted-foreground: #f4efe2;
+  --accent: #ada28e;
+  --accent-foreground: #21211e;
+  --destructive: #dc2626;
+  --destructive-foreground: #f4efe2;
+  --border: #d9d4c9;
+  --input: #fef9eb;
+  --ring: #ada28e;
+  --chart-1: #ada28e;
+  --chart-2: #d9d4c9;
+  --chart-3: #777573;
+  --chart-4: #21211e;
+  --chart-5: #f4efe2;
+  --radius: 0.5rem;
+  --sidebar: #f4efe2;
+  --sidebar-foreground: #21211e;
+  --sidebar-primary: #ada28e;
+  --sidebar-primary-foreground: #21211e;
+  --sidebar-accent: #d9d4c9;
+  --sidebar-accent-foreground: #21211e;
+  --sidebar-border: #d9d4c9;
+  --sidebar-ring: #ada28e;
+}
+
+.dark {
+  --background: #21211e;
+  --foreground: #f4efe2;
+  --card: #2a2926;
+  --card-foreground: #f4efe2;
+  --popover: #21211e;
+  --popover-foreground: #f4efe2;
+  --primary: #ada28e;
+  --primary-foreground: #21211e;
+  --secondary: #3a3632;
+  --secondary-foreground: #f4efe2;
+  --muted: #777573;
+  --muted-foreground: #21211e;
+  --accent: #d9d4c9;
+  --accent-foreground: #21211e;
+  --destructive: #ef4444;
+  --destructive-foreground: #21211e;
+  --border: #3a3632;
+  --input: #2a2926;
+  --ring: #ada28e;
+  --chart-1: #ada28e;
+  --chart-2: #d9d4c9;
+  --chart-3: #777573;
+  --chart-4: #f4efe2;
+  --chart-5: #21211e;
+  --sidebar: #2a2926;
+  --sidebar-foreground: #f4efe2;
+  --sidebar-primary: #ada28e;
+  --sidebar-primary-foreground: #21211e;
+  --sidebar-accent: #3a3632;
+  --sidebar-accent-foreground: #f4efe2;
+  --sidebar-border: #3a3632;
+  --sidebar-ring: #ada28e;
+}
+
+@theme inline {
+  --font-sans: "Georgia", "Georgia Fallback", serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
